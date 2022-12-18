@@ -1,0 +1,36 @@
+-Speaker Systems (Product: Category ID)
+ https://api.bestbuy.com/v1/products(customerTopRated=true&categoryPath.id in(abcat0205004))?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=10&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
+-Super Hero Movies (Product: SKU list)
+https://api.bestbuy.com/v1/products(sku in(9157059,6911158,7835032,5998636,8880044, 6140355, 5834015,1805695, 5326164,1725175,4782022))?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=15&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
+-Upcoming Music Releases (Product: Release Date)
+https://api.bestbuy.com/v1/products(releaseDate>today&categoryPath.id in(cat02001))?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=10&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
+-Universal Remote Store Availability (Product: SKU + Store: Zip)
+https://api.bestbuy.com/v1/stores((area(55423,10)))+products(sku%20in%20(4502603))?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&show=products.sku,products.name,products.shortDescription,products.salePrice,products.regularPrice,products.image,products.customerReviewCount,products.customerReviewAverage,address,address2,city,location,longName,phone,fullPostalCode,region,storeId,storeType&callback=JSON_CALLBACK&format=json
+
+-Stores with No Receipt Trade In (Stores: Zip Code + Service)
+https://api.bestbuy.com/v1/stores((area(55435,10)&tradeIn=Trade-In - No-receipt))?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&show=all&callback=JSON_CALLBACK&format=json
+
+-Video Games Categories (Categories: Keyword)
+https://api.bestbuy.com/v1/categories(name=video game*)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&show=name,id,subCategories.name,subCategories.id&callback=JSON_CALLBACK&format=json
+
+-Favorite Show Reviews (Reviews: Comment Keyword)
+https://api.bestbuy.com/v1/reviews(comment=favorite show*)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&show=comment,id,rating,reviewer.name,sku,submissionTime,title&callback=JSON_CALLBACK&format=json
+
+-Game Room Games (Product: Keyword with OR + Category)
+https://api.bestbuy.com/v1/products((search=dart board|search=pool)&categoryPath.id=pcmcat219100050010)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=10&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
+-Open Box 4K TVs (Buying Options: Open Box)
+https://api.bestbuy.com/beta/products/openBox(categoryId=pcmcat333800050003)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&callback=JSON_CALLBACK
+
+-Most Viewed Beverage Refrigerators (Recommendations: Most Popular Viewed)
+https://api.bestbuy.com/beta/products/mostViewed(categoryId=pcmcat325300050000)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&callback=JSON_CALLBACK
+
+-Nostalgia Specialty Appliances (Product: Category + Brand)
+https://api.bestbuy.com/v1/products(categoryPath.id in(pcmcat194000050022)&manufacturer=Nostalgia Electrics&color!=pink)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=10&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
+-Deal of the Day (Product: Offer Type)
+https://api.bestbuy.com/v1/products(offers.type=deal_of_the_day)?apiKey=h3B3j6tKAwAjRwkNIYcVmGVb&format=json&pageSize=15&show=sku,name,image,salePrice,customerTopRated&sort=bestSellingRank
+
